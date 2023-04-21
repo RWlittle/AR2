@@ -2,19 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>360&deg; VGK</title>
+    <title>360&deg; Image</title>
     <meta name="description" content="360&deg; Image - A-Frame">
     <script src="assets/aframe-master.js"></script>
   </head>
   <body>
     
-    <div id="wrapper" style="height:1000px;width:1000px">
-      <a-scene embedded style="height:50%;width:60%">
+    
+      <a-scene>
+        <a-camera position="0 0 3" user-height="0"></a-camera>
         <a-sky src="assets/Eingang.jpg" rotation="0 -130 0"></a-sky>
 
         <a-text font="kelsonsans" value="Eingang" width="6" position="-2.5 0.25 -1.5"
               rotation="0 15 0"></a-text>
-      </a-scene>
-    </div>                           
+      </a-scene>                        
   </body>
 </html>
