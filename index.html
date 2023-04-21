@@ -2,15 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>360&deg; I</title>
+    <title>360&deg; V</title>
     <meta name="description" content="360&deg; Image - A-Frame">
-    <script src="dist/aframe-spe-particles-component.js"></script>
+    <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+</head>
     <script src="assets/aframe-master.js"></script>
   </head>
   <body>
     
       <a-scene>
-        <a-entity spe-particles="texture: assets/blob.png; color: blue; velocity: 0 10 0; velocity-spread: 2 0 2; acceleration: 0 -10 0">
+       <a-entity particles="texture: /assets/blob.png; color: blue; velocity: 0 10 0; velocity-spread: 2 0 2; acceleration: 0 -10 0"></a-entity>
           <a-text value="fountain" mixin="label"></a-text>
         </a-entity>
         <a-plane color="red" position="-2.5 0.25 -1.5"></a-plane>
