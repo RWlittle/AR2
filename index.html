@@ -1,26 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>360&deg; I</title>
-    <meta name="description" content="360&deg; Image - A-Frame">
-    <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
-</head>
-    <script src="assets/aframe-master.js"></script>
-  </head>
-  <body>
-    
-      <a-scene>
-       <a-entity particles="texture: /assets/blob.png; color: blue; velocity: 0 10 0; velocity-spread: 2 0 2; acceleration: 0 -10 0"></a-entity>
-          <a-text value="fountain" mixin="label"></a-text>
-        </a-entity>
-        <a-plane color="red" position="-2.5 0.25 -1.5"></a-plane>
-        <a-box color="green"></a-box>
-        <a-sky src="assets/Eingang.jpg" rotation="0 0 0" visible="false"></a-sky>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    </head>
 
-        <a-text font="kelsonsans" value="Eingang" width="6" position="-2.5 0.25 -1.5"
-              rotation="0 15 0" color="black"></a-text>
-        <a-plane color="red"></a-plane>
-      </a-scene>                        
-  </body>
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+            renderer="logarithmicDepthBuffer: true;"
+            embedded
+            loading-screen="enabled: false;"
+            arjs="sourceType: webcam; debugUIEnabled: false;"
+        >
+            <a-assets>
+                <a-asset-item
+                    id="animated-asset"
+                    src="assets/asset.gltf"
+                ></a-asset-item>
+            </a-assets>
+
+                <a-entity
+                    look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    scale="0.20133265223171318 0.20133265223171318 0.20133265223171318"
+                    gps-entity-place="latitude: 49.83323815919316; longitude: 7.876027017864545;"
+                ></a-entity>
+                <a-entity
+                    look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    scale="0.20133265223171318 0.20133265223171318 0.20133265223171318"
+                    gps-entity-place="latitude: 49.83342269894916; longitude: 7.8761450350612;"
+                ></a-entity>
+                <a-entity
+                    look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    scale="0.20133265223171318 0.20133265223171318 0.20133265223171318"
+                    gps-entity-place="latitude: 49.83396016701; longitude: 7.875984102520307;"
+                ></a-entity>
+                <a-entity
+                    look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    scale="0.20133265223171318 0.20133265223171318 0.20133265223171318"
+                    gps-entity-place="latitude: 49.83522884480895; longitude: 7.8760162890284855;"
+                ></a-entity>
+                <a-entity
+                    look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    scale="0.20133265223171318 0.20133265223171318 0.20133265223171318"
+                    gps-entity-place="latitude: 49.8357409198669; longitude: 7.877475410732587;"
+                ></a-entity>
+                <a-entity
+                    look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    scale="0.20133265223171318 0.20133265223171318 0.20133265223171318"
+                    gps-entity-place="latitude: 49.8332024045482; longitude: 7.876021653446514;"
+                ></a-entity>
+
+            <a-camera gps-camera rotation-reader></a-camera>
+        </a-scene>
+    </body>
 </html>
