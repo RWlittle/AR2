@@ -41,12 +41,14 @@
                     gps-entity-place="latitude: 49.841968425748156; longitude: 7.873015165296239;"
                 ></a-image>
 
-      <a-entity id="objects" scale="0.2 0.2 0.2" position="0 0 -2" shadow>
-        <a-box position="-1 0.5 1" rotation="0 45 0" color="#4CC3D9"></a-box>
-        <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      </a-entity>
-
+     <a-assets>
+     <img id="texture" src="assets/asset.jpeg">
+</a-assets>
+<a-box src="#texture"
+         look-at="[gps-camera]"
+        scale="120 120 120"
+	gps-entity-place="latitude: ${lat}; longitude: ${lng};">
+</a-box>
             <a-camera gps-camera rotation-reader></a-camera>
         </a-scene>
     </body>
