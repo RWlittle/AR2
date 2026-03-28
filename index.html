@@ -1,55 +1,14 @@
-<!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    </head>
-
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            embedded
-            loading-screen="enabled: false;"
-            arjs="sourceType: webcam; debugUIEnabled: false;"
-        >
-                 <a-box position="-1 0.5 1" rotation="0 45 0" color="#4CC3D9" look-at="[gps-camera]"></a-box>
-            
-            <a-image
-                    src="assets/asset.jpeg"
-                    look-at="[gps-camera]"
-                    scale="1 1 1"
-                    gps-entity-place="latitude: "latitude: 49.8332196; longitude: 7.8760647;"
-                ></a-image>
-                <a-image
-                    src="assets/asset.jpeg"
-                    look-at="[gps-camera]"
-                    scale="1 1 1"
-                    gps-entity-place="latitude: 49.84212295002524; longitude: 7.8731635804797415;"
-                ></a-image>
-                <a-image
-                    src="assets/asset.jpeg"
-                    look-at="[gps-camera]"
-                    scale="1 1 1"
-                    gps-entity-place="latitude: 49.84202377775955; longitude: 7.873020529714268;"
-                ></a-image>
-                <a-image
-                    src="assets/asset.jpeg"
-                    look-at="[gps-camera]"
-                    scale="1 1 1"
-                    gps-entity-place="latitude: 49.841968425748156; longitude: 7.873015165296239;"
-                ></a-image>
-
-     <a-assets>
-     <img id="texture" src="assets/asset.jpeg">
-</a-assets>
-<a-box src="#texture"
-         look-at="[gps-camera]"
-        scale="120 120 120"
-	gps-entity-place="latitude: 49.841968425748156; longitude: 7.873015165296239;">
-</a-box>
-            <a-camera gps-camera rotation-reader></a-camera>
-        </a-scene>
-    </body>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
 </html>
