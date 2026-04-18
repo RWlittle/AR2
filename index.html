@@ -1,18 +1,14 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-
-
   </head>
   <body>
-
-      < a-scene webxr = "erforderlichFeatures: hit-test,lokaler Boden;                
-optional Features: Dom-Overlay, unbegrenzt;                
-overlayElement: #overlay;" >
+      < a-scene webxr ="requiredFeatures: hit-test,local-floor;">              
+              
       <a-box position="0 0.5 -2" rotation="0 45 0" color="#4CC3D9"></a-box>
       
       <!-- Sky: Einfacher Hintergrund, im AR-Modus meist transparent -->
-      <a-sky color="#ECECEC"></a-sky>
+      
       
       <!-- Kamera mit AR-Steuerung -->
       <a-camera></a-camera>
