@@ -1,33 +1,15 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>A-Frame Foto an Position</title>
-    <!-- A-Frame Bibliothek laden -->
-    <script src="https://aframe.io"></script>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script scr="ar-components.js"></script>
   </head>
   <body>
     <a-scene>
-      <!-- Assets laden (für schnellere Darstellung) -->
-      <a-assets>
-        <img id="meinFoto" src="assets\assets.jpg"> <!-- HIER BILD PFAD ANPASSEN -->
-      </a-assets>
-      <!-- Hintergrund (Himmel) -->
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
       <a-sky color="#ECECEC"></a-sky>
-      <!-- FOTO AN EINEM BESTIMMTEN ORT -->
-      <!-- position: x y z (0 0 0 ist die Mitte des Raumes) -->
-      <!-- rotation: x y z in Grad -->
-      <a-image
-        src="#meinFoto"
-        position="0 1.5 -3"
-        width="4"
-        height="3">
-      </a-image>
-
-     <!-- Kamera, damit man sich umsehen kann -->
-      <a-camera>
-        <a-cursor></a-cursor>
-      </a-camera>
     </a-scene>
   </body>
 </html>
