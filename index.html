@@ -4,30 +4,26 @@ html<!DOCTYPE html>
     <title>A-Frame 1.7.0 Location Based AR</title>
     <!-- A-Frame 1.7.1 -->
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@1.0.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script scr="ar-components.js"></script>
     <!-- AR.js Location-Based (New API) -->
     <script type="text/javascript" src="https://github.io"></script>
 </head>
-<body style="margin: 0; overflow: hidden;">
-    <a-scene
-    <a-box
-      
+<body>
+    <a-scene  
       vr-mode-ui="enabled: false"
         embedded
         arjs="sourceType: webcam; debugUIEnabled: false;">
 
-        <!-- 
-          gps-new-camera: Verwaltet die Position des Nutzers.
-          Ersetzen Sie simulatLatitude/Longitude für Tests am Desktop.
-        -->
+     <a-box
+         look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="latitude: 49.833197; longitude: 7.875981"
+         </a-box>
         <a-camera gps-new-camera="gpsMinDistance: 5; simulateLatitude: 49.833197; simulateLongitude: 7.875981">
         </a-camera>
-
-        
-        
-        </a-box>
-
+    
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
